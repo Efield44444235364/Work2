@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DNS Security Status</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #00AEEF;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .label {
+      font-weight: bold;
+      color: #007BFF;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DNS Security Status</h1>
+    <p>ตรวจสอบสถานะ DNS ของคุณแบบปลอดภัย</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <p><span class="label">IP Address:</span> <span id="ip">Loading...</span></p>
+      <p><span class="label">ISP:</span> <span id="isp">Loading...</span></p>
+      <p><span class="label">Location:</span> <span id="location">Loading...</span></p>
+      <p><span class="label">DNS Leak Test:</span> <span id="dnsleak">Checking...</span></p>
+    </div>
+  </div>
+
+  <script>
+    fetch('https://ipapi.co/json')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('ip').textContent = data.ip;
+        document.getElementById('isp').textContent = data.org || "Unknown";
+        document.getElementById('location').textContent = `${data.city}, ${data.region}, ${data.country_name}`;
+        // DNS leak check dummy
+        document.getElementById('dnsleak').textContent = (data.org && data.org.toLowerCase().includes("google" || "cloudflare"))
+          ? "✅ No DNS Leak"
+          : "⚠️ Possible DNS Leak";
+      });
+  </script>
+</body>
+</html>
