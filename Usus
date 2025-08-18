@@ -135,9 +135,9 @@ function closeLightbox() {
         <td>ธนภัทร ชุมใหม่</td>
         <td>ฟิว😊</td>
         <td>0634213407</td>
-        <td><img src="file:///D:/ธนภัทร/img/few.jpg" 
+        <td><img src="https://raw.githubusercontent.com/Efield44444235364/Work2/refs/heads/main/%E0%B8%81%E0%B8%B9%E0%B8%AA%E0%B8%A7%E0%B8%A2%E0%B8%A1%E0%B8%B2%E0%B8%81.jpg" 
                  data-name="abของฟิว" 
-                 data-file="file:///D:/ธนภัทร/nong%20field.html" 
+                 data-file="https://raw.githubusercontent.com/Efield44444235364/Work2/refs/heads/main/nong%20field.html"
                  onclick="openLightbox(this)"></td>
     </tr>
     <tr>
@@ -145,9 +145,9 @@ function closeLightbox() {
         <td>นิภาภร บัวแก้ว</td>
         <td>ครีม🧴</td>
         <td>0639907275</td>
-        <td><img src="file:///D:/ธนภัทร/img/cream.jpg" 
+        <td><img src="https://raw.githubusercontent.com/Efield44444235364/Work2/refs/heads/main/1754273789788.jpg" 
                  data-name="ขอวครีม" 
-                 data-file="file:///D:/ธนภัทร/ครีม.html" 
+                 data-file="https://raw.githubusercontent.com/Efield44444235364/Work2/refs/heads/main/ครีม.html"
                  onclick="openLightbox(this)"></td>
     </tr>
     <tr>
@@ -155,9 +155,9 @@ function closeLightbox() {
         <td>พิมพ์ณิชชา สันติรันต์สกุล</td>
         <td>มุก 🐰</td>
         <td>0636811764</td>
-        <td><img src="file:///D:/ธนภัทร/img/mook.jpg" 
+        <td><img src="https://raw.githubusercontent.com/Efield44444235364/Work2/refs/heads/main/%E0%B8%AD%E0%B8%B5%E0%B8%A1%E0%B8%B8%E0%B8%81.jpg" 
                  data-name="มุก" 
-                 data-file="file:///D:/ธนภัทร/มุก.html" 
+                 data-file="https://raw.githubusercontent.com/Efield44444235364/Work2/refs/heads/main/มุก.html"
                  onclick="openLightbox(this)"></td>
     </tr>
     <tr>
@@ -165,8 +165,8 @@ function closeLightbox() {
         <td>ชีฐาภัทร ศรครุฑ</td>
         <td>ชีต้า 🐯</td>
         <td>0617548495</td>
-        <td><img src="file:///D:/ธนภัทร/img/eta.png" 
-                 data-name="ชีต้า" 
+        <td><img src="https://raw.githubusercontent.com/Efield44444235364/Work2/refs/heads/main/%E0%B8%AD%E0%B8%B5%E0%B8%95%E0%B9%89%E0%B8%B2.png" 
+                 data-name="ชีต้า"
                  onclick="openLightbox(this)"></td>
     </tr>
 </table>
