@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>💖 ทำเนียบเพื่อน 3/8 💖</title>
+<style>
+body {
+    background-color: #ffeef8;
+    font-family: 'Comic Sans MS', cursive;
+    color: #4a235a;
+    text-align: center;
+}
+h1 {
+    color: #d63384;
+    background-color: #fcd6ec;
+    padding: 15px;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 2px 2px 10px #d6a4d8;
+}
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%;
+    background-color: #fffafa;
+    box-shadow: 0px 0px 15px #e3c6f1;
+    border-radius: 15px;
+    overflow: hidden;
+}
+th, td {
+    border: 1px solid #f5c6e7;
+    padding: 10px;
+    font-size: 18px;
+}
+th {
+    background-color: #f6c2e9;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #fff0f5;
+}
+img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #d89dd8;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+img:hover {
+    transform: scale(1.05);
+}
+caption {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #c0398f;
+}
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+    color: white;
+}
+#lightbox img {
+    max-width: 80%;
+    max-height: 60%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000;
+}
+#lightbox span {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+}
+#info {
+    margin-top: 20px;
+    font-size: 20px;
+}
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #ff4d4d;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background: #cc0000;
+}
+</style>
+<script>
+function openLightbox(img) {
+    document.getElementById("lightbox-img").src = img.src;
+    document.getElementById("info").innerText = img.dataset.name;
+    if(img.dataset.file) {
+        document.getElementById("open-btn").style.display = "inline-block";
+        document.getElementById("open-btn").onclick = function() {
+            window.open(img.dataset.file,"popupWindow","width=800,height=600");
+        };
+    } else {
+        document.getElementById("open-btn").style.display = "none";
+    }
+    document.getElementById("lightbox").style.display = "flex";
+}
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+</head>
+<body>
+<h1>📒 ทำเนียบเพื่อนห้อง 3/8 น้าาาา 💕</h1>
+
+<table>
+    <caption>🌸 รายชื่อเพื่อนสุดเลิฟของเรา 🌸</caption>
+    <tr>
+        <th>ที่</th>
+        <th>ชื่อ - นามสกุล</th>
+        <th>ชื่อเล่น</th>
+        <th>เบอร์โทร</th>
+        <th>รูปภาพ</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>ธนภัทร ชุมใหม่</td>
+        <td>ฟิว😊</td>
+        <td>0634213407</td>
+        <td><img src="file:///D:/ธนภัทร/img/few.jpg" 
+                 data-name="abของฟิว" 
+                 data-file="file:///D:/ธนภัทร/nong%20field.html" 
+                 onclick="openLightbox(this)"></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>นิภาภร บัวแก้ว</td>
+        <td>ครีม🧴</td>
+        <td>0639907275</td>
+        <td><img src="file:///D:/ธนภัทร/img/cream.jpg" 
+                 data-name="ขอวครีม" 
+                 data-file="file:///D:/ธนภัทร/ครีม.html" 
+                 onclick="openLightbox(this)"></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>พิมพ์ณิชชา สันติรันต์สกุล</td>
+        <td>มุก 🐰</td>
+        <td>0636811764</td>
+        <td><img src="file:///D:/ธนภัทร/img/mook.jpg" 
+                 data-name="มุก" 
+                 data-file="file:///D:/ธนภัทร/มุก.html" 
+                 onclick="openLightbox(this)"></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>ชีฐาภัทร ศรครุฑ</td>
+        <td>ชีต้า 🐯</td>
+        <td>0617548495</td>
+        <td><img src="file:///D:/ธนภัทร/img/eta.png" 
+                 data-name="ชีต้า" 
+                 onclick="openLightbox(this)"></td>
+    </tr>
+</table>
+
+<p style="color:#ff66aa;">🫶 จะเพิ่มชื่อเพื่อนอีกเร็วๆ นี้นะจ๊ะ 💌</p>
+
+<!-- Lightbox -->
+<div id="lightbox">
+    <span onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img">
+    <div id="info"></div>
+    <button id="open-btn">เปิดไฟล์</button>
+</div>
+
+</body>
+</html>
